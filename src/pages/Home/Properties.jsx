@@ -9,7 +9,7 @@ const Properties = () => {
       .then((data) => setProperties(data));
   }, []);
   return (
-    <div className="mt-20">
+    <div className="my-20">
       <div>
         <h2 className="text-3xl font-bold text-center">
           Properties For Sale & Rent: {properties.length}
