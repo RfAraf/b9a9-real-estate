@@ -46,7 +46,7 @@ const Property = ({ property }) => {
         <p>
           <span className="font-bold">Area:</span> {area}
         </p>
-        <div className="card-actions ">
+        <div className="card-actions justify-end">
           <Link to={`/property/${id}`}>
             <button className="btn btn-primary w-full">View Property</button>
           </Link>
