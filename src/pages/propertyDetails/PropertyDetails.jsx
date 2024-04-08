@@ -29,7 +29,7 @@ const PropertyDetails = () => {
   const { bedrooms, bathrooms, garages } = room_category;
   return (
     <div className="space-y-10 mb-20">
-      <div className="flex flex-col lg:flex-row justify-between items-center mt-5">
+      <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mt-5">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold">{estate_title}</h2>
           <div className="flex gap-5">
