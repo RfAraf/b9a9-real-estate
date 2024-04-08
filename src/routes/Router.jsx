@@ -6,6 +6,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Home from "../pages/Home/Home";
+import PropertyDetails from "../pages/propertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/property/:id",
+        element: <PropertyDetails></PropertyDetails>,
+        loader: () => fetch("/properties.json"),
       },
       {
         path: "/team",

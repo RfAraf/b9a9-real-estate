@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const Property = ({ property }) => {
   const {
+    id,
     estate_title,
     image,
     segment_name,
@@ -44,7 +47,9 @@ const Property = ({ property }) => {
           <span className="font-bold">Area:</span> {area}
         </p>
         <div className="card-actions ">
-          <button className="btn btn-primary w-full">View Property</button>
+          <Link to={`/property/${id}`}>
+            <button className="btn btn-primary w-full">View Property</button>
+          </Link>
         </div>
       </div>
     </div>
