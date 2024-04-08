@@ -1,0 +1,342 @@
+[
+  {
+    "image": "https://i.ibb.co/THLBwDz/001.jpg",
+    "estate_title": "Luxury Villa with Ocean View",
+    "id": "001",
+    "segment_name": "Villa",
+    "small_description": "Luxury villa with breathtaking ocean views and modern amenities.",
+    "big_description": "Experience luxury living in this stunning villa with breathtaking ocean views. Featuring modern architecture and high-end amenities, this villa offers the perfect blend of comfort and sophistication. With spacious interiors, a private swimming pool, gym, home theater, wine cellar, and game room, it's an ideal retreat for those seeking opulent coastal living.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "4000 sq ft",
+    "location": {
+      "address": "123 Ocean Avenue",
+      "country": "United States",
+      "state": "California",
+      "city": "Malibu",
+      "neighborhood": "Beachfront",
+      "postal_code": "90265"
+    },
+    "facilities": [
+      "Swimming Pool",
+      "Gym",
+      "Home Theater",
+      "Terrace",
+      "Wine Cellar",
+      "Game Room"
+    ],
+    "indoor_features": [
+      "Vaulted Ceilings",
+      "Walk-In Closet",
+      "Fireplace",
+      "Jacuzzi",
+      "Sauna"
+    ],
+    "estate_overview": [
+      "Ocean View",
+      "Private Beach Access",
+      "Gated Community"
+    ],
+    "room_category": {
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "garages": 3
+    }
+  },
+  {
+    "image": "https://i.ibb.co/ZxMNDkq/002.jpg",
+    "estate_title": "Cozy Townhouse in Suburban Charm",
+    "id": "002",
+    "segment_name": "Townhouse",
+    "small_description": "Charming townhouse in a peaceful suburban neighborhood.",
+    "big_description": "Nestled in a peaceful suburban neighborhood, this charming townhouse offers a tranquil retreat for families. With a backyard garden, garage, fireplace, and study room, it's perfect for those seeking a cozy and inviting atmosphere. Enjoy hardwood floors, granite countertops, and central heating for added comfort.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": {
+      "address": "456 Garden Street",
+      "country": "United States",
+      "state": "Colorado",
+      "city": "Boulder",
+      "neighborhood": "Suburban",
+      "postal_code": "80302"
+    },
+    "facilities": ["Backyard Garden", "Garage", "Fireplace", "Study Room"],
+    "indoor_features": [
+      "Hardwood Floors",
+      "Granite Countertops",
+      "Central Heating"
+    ],
+    "estate_overview": ["Mountain View", "Nearby Parks", "Community Pool"],
+    "room_category": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "garages": 1
+    }
+  },
+  {
+    "image": "https://i.ibb.co/VD1GPqK/003.jpg",
+    "estate_title": "Modern Loft in Urban Oasis",
+    "id": "003",
+    "segment_name": "Apartment",
+    "small_description": "Stylish loft apartment in the heart of the city.",
+    "big_description": "Located in the heart of the city, this sleek and stylish loft apartment offers urban living at its finest. With an open layout, city views, fitness center, rooftop deck, and laundry room, it provides both comfort and convenience. Enjoy exposed brick walls, stainless steel appliances, and loft design for a contemporary feel.",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": {
+      "address": "789 Urban Street",
+      "country": "United States",
+      "state": "New York",
+      "city": "Brooklyn",
+      "neighborhood": "Urban Center",
+      "postal_code": "11201"
+    },
+    "facilities": [
+      "Open Layout",
+      "City View",
+      "Fitness Center",
+      "Rooftop Deck",
+      "Laundry Room"
+    ],
+    "indoor_features": [
+      "Exposed Brick Walls",
+      "Stainless Steel Appliances",
+      "Loft Design"
+    ],
+    "estate_overview": [
+      "City View",
+      "Nearby Public Transportation",
+      "Close to Restaurants"
+    ],
+    "room_category": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "garages": 0
+    }
+  },
+  {
+    "image": "https://i.ibb.co/0nbgN24/004.jpg",
+    "estate_title": "Classic Colonial Home",
+    "id": "004",
+    "segment_name": "House",
+    "small_description": "Elegant colonial-style home with spacious interiors.",
+    "big_description": "Step into elegance with this classic colonial-style home boasting timeless architecture and spacious interiors. Ideal for those seeking traditional charm, it features a wrap-around porch, gourmet kitchen, library, and mudroom. Enjoy crown molding, a formal dining room, and bay windows for added sophistication.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "2800 sq ft",
+    "location": {
+      "address": "101 Colonial Lane",
+      "country": "United States",
+      "state": "South Carolina",
+      "city": "Charleston",
+      "neighborhood": "Historic District",
+      "postal_code": "29401"
+    },
+    "facilities": [
+      "Wrap-around Porch",
+      "Gourmet Kitchen",
+      "Library",
+      "Mudroom"
+    ],
+    "indoor_features": ["Crown Molding", "Formal Dining Room", "Bay Windows"],
+    "estate_overview": [
+      "Historic District",
+      "Nearby Schools",
+      "Parks and Trails"
+    ],
+    "room_category": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "garages": 2
+    }
+  },
+  {
+    "image": "https://i.ibb.co/RS0Vtjw/005.jpg",
+    "estate_title": "Sunny Beach House Retreat",
+    "id": "005",
+    "segment_name": "Beach House",
+    "small_description": "Sunny beach house retreat steps away from the shore.",
+    "big_description": "Escape to this sunny beach house retreat located just steps away from the shore. Perfect for relaxation and entertaining, it offers an oceanfront patio, private dock, outdoor kitchen, beach access, and sun deck. Enjoy high ceilings, floor-to-ceiling windows, and a spa bathroom for ultimate comfort.",
+    "price": "$1,800,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": {
+      "address": "246 Oceanfront Drive",
+      "country": "United States",
+      "state": "Florida",
+      "city": "Miami Beach",
+      "neighborhood": "Beachfront",
+      "postal_code": "33139"
+    },
+    "facilities": [
+      "Oceanfront Patio",
+      "Private Dock",
+      "Outdoor Kitchen",
+      "Beach Access",
+      "Sun Deck"
+    ],
+    "indoor_features": [
+      "High Ceilings",
+      "Floor-to-Ceiling Windows",
+      "Spa Bathroom"
+    ],
+    "estate_overview": [
+      "Beachfront Property",
+      "Waterfront Views",
+      "Nearby Restaurants"
+    ],
+    "room_category": {
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "garages": 3
+    }
+  },
+  {
+    "image": "https://i.ibb.co/Pr2Brgh/006.jpg",
+    "estate_title": "Spacious Family Home with Mountain Views",
+    "id": "006",
+    "segment_name": "House",
+    "small_description": "Spacious family home with stunning mountain views.",
+    "big_description": "Family-friendly home offering ample space and stunning mountain views. Experience comfort and tranquility in this inviting residence, featuring a large yard, mountain view deck, home office, basement, and media room. Enjoy a family room, eat-in kitchen, and bonus room for versatile living.",
+    "price": "$600,000",
+    "status": "rent",
+    "area": "3200 sq ft",
+    "location": {
+      "address": "369 Mountain View Avenue",
+      "country": "United States",
+      "state": "Colorado",
+      "city": "Denver",
+      "neighborhood": "Suburban",
+      "postal_code": "80202"
+    },
+    "facilities": [
+      "Large Yard",
+      "Mountain View Deck",
+      "Home Office",
+      "Basement",
+      "Media Room"
+    ],
+    "indoor_features": ["Family Room", "Eat-In Kitchen", "Bonus Room"],
+    "estate_overview": [
+      "Mountain Views",
+      "Hiking Trails Nearby",
+      "Family-Friendly Neighborhood"
+    ],
+    "room_category": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "garages": 2
+    }
+  },
+  {
+    "image": "https://i.ibb.co/68qfBWC/007.jpg",
+    "estate_title": "Urban Condo with Panoramic Cityscape",
+    "id": "007",
+    "segment_name": "Condo",
+    "small_description": "Contemporary condo with panoramic cityscape views.",
+    "big_description": "Experience urban living at its finest with this contemporary condo offering panoramic views of the city skyline. Enjoy modern amenities such as a balcony, fitness center, concierge service, roof deck, and meeting room. With floor-to-ceiling windows, smart home technology, and modern finishes, it's the epitome of city living.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "1200 sq ft",
+    "location": {
+      "address": "789 Urban Street",
+      "country": "United States",
+      "state": "California",
+      "city": "San Francisco",
+      "neighborhood": "Downtown",
+      "postal_code": "94103"
+    },
+    "facilities": [
+      "Balcony",
+      "Fitness Center",
+      "Concierge Service",
+      "Roof Deck",
+      "Meeting Room"
+    ],
+    "indoor_features": [
+      "Floor-to-Ceiling Windows",
+      "Smart Home Technology",
+      "Modern Finishes"
+    ],
+    "estate_overview": ["Cityscape Views", "Urban Living", "Close to Shopping"],
+    "room_category": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "garages": 1
+    }
+  },
+  {
+    "image": "https://i.ibb.co/P9NtpFd/008.jpg",
+    "estate_title": "Riverside Retreat with Private Dock",
+    "id": "008",
+    "segment_name": "House",
+    "small_description": "Tranquil riverside retreat with a private dock.",
+    "big_description": "Escape the hustle and bustle with this tranquil riverside retreat featuring a private dock and serene surroundings. Enjoy riverfront living with amenities such as a riverfront patio, fire pit, boat launch, garden, and workshop. Indoors, relax in the sunroom, walk-in pantry, and vaulted ceilings.",
+    "price": "$900,000",
+    "status": "rent",
+    "area": "2200 sq ft",
+    "location": {
+      "address": "456 Riverside Drive",
+      "country": "United States",
+      "state": "Oregon",
+      "city": "Portland",
+      "neighborhood": "Waterfront",
+      "postal_code": "97201"
+    },
+    "facilities": [
+      "Riverfront Patio",
+      "Fire Pit",
+      "Boat Launch",
+      "Garden",
+      "Workshop"
+    ],
+    "indoor_features": ["Sunroom", "Walk-In Pantry", "Vaulted Ceilings"],
+    "estate_overview": [
+      "Riverside Living",
+      "Tranquil Environment",
+      "Nearby Nature Trails"
+    ],
+    "room_category": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "garages": 0
+    }
+  },
+  {
+    "image": "https://i.ibb.co/fnFBNJk/009.jpg",
+    "estate_title": "Luxurious Penthouse with Skyline Views",
+    "id": "009",
+    "segment_name": "Penthouse",
+    "small_description": "Luxurious penthouse with breathtaking skyline views.",
+    "big_description": "Indulge in luxury living with this exquisite penthouse boasting breathtaking skyline views. Elevate your lifestyle with modern amenities including a rooftop terrace, infinity pool, spa, and concierge service. With spacious interiors and high-end finishes, this penthouse offers the ultimate urban retreat.",
+    "price": "$3,000,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": {
+      "address": "101 Skyline Avenue",
+      "country": "United States",
+      "state": "New York",
+      "city": "Manhattan",
+      "neighborhood": "Midtown",
+      "postal_code": "10001"
+    },
+    "facilities": [
+      "Rooftop Terrace",
+      "Infinity Pool",
+      "Spa",
+      "Concierge Service"
+    ],
+    "indoor_features": [
+      "High Ceilings",
+      "Floor-to-Ceiling Windows",
+      "Luxury Finishes"
+    ],
+    "estate_overview": ["Skyline Views", "Luxury Living", "Central Location"],
+    "room_category": {
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "garages": 2
+    }
+  }
+]
