@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 // swiper slider
 import { useState } from "react";
@@ -18,7 +19,7 @@ import slider2 from "../../assets/slider-2.jpg";
 import slider3 from "../../assets/slider-3.jpg";
 import slider4 from "../../assets/slider-4.jpg";
 
-const PropertyDetailsSlider = () => {
+const PropertyDetailsSlider = ({ image }) => {
   // for swiper
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -41,7 +42,7 @@ const PropertyDetailsSlider = () => {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <img className="h-[500px] w-full" src={slider1} />
+          <img className="h-[500px] w-full" src={image} />
         </SwiperSlide>
         <SwiperSlide>
           <img className="h-[500px] w-full" src={slider2} />

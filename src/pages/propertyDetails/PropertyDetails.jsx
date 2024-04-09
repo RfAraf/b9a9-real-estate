@@ -6,6 +6,7 @@ import { GiHomeGarage } from "react-icons/gi";
 import { IoLocationOutline } from "react-icons/io5";
 import PropertyDetailsSlider from "./PropertyDetailsSlider";
 import blueprint from "../../assets/floor-1.png";
+import { Helmet } from "react-helmet-async";
 
 const PropertyDetails = () => {
   const properties = useLoaderData();
@@ -14,6 +15,7 @@ const PropertyDetails = () => {
 
   const {
     estate_title,
+    image,
     segment_name,
     big_description,
     price,
@@ -29,6 +31,9 @@ const PropertyDetails = () => {
   const { bedrooms, bathrooms, garages } = room_category;
   return (
     <div className="space-y-10 mb-20">
+      <Helmet>
+        <title>RF Real State | Property - {id}</title>
+      </Helmet>
       <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mt-5">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold">{estate_title}</h2>
@@ -62,7 +67,7 @@ const PropertyDetails = () => {
 
       {/* swiper slider: Thumbs gallery loop */}
       <div className="my-7">
-        <PropertyDetailsSlider></PropertyDetailsSlider>
+        <PropertyDetailsSlider image={image}></PropertyDetailsSlider>
       </div>
 
       <div className="space-y-5">
