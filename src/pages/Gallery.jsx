@@ -11,10 +11,11 @@ import gallery9 from "../assets/gallery-9.jpg";
 import gallery10 from "../assets/gallery-10.jpg";
 import gallery11 from "../assets/gallery-11.jpg";
 import gallery12 from "../assets/gallery-12.jpg";
+import "animate.css";
 
 const Gallery = () => {
   return (
-    <div>
+    <div className="animate__animated animate__zoomIn">
       <Helmet>
         <title>RF Real State | Gallery</title>
       </Helmet>

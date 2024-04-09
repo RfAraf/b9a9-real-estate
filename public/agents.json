@@ -1,0 +1,62 @@
+[
+  {
+    "agent_id": 1,
+    "image": "https://i.ibb.co/q1h0MLX/06.jpg",
+    "name": "John Doe",
+    "post": "Real Estate Broker"
+  },
+  {
+    "agent_id": 2,
+    "image": "https://i.ibb.co/7pNzFQS/10-1.jpg",
+    "name": "Jane Smith",
+    "post": "Buying Agent"
+  },
+  {
+    "agent_id": 3,
+    "image": "https://i.ibb.co/74GNTyZ/11.jpg",
+    "name": "Michael Johnson",
+    "post": "Real Estate Broker"
+  },
+  {
+    "agent_id": 4,
+    "image": "https://i.ibb.co/k5V1RRT/12-1.jpg",
+    "name": "Emily Williams",
+    "post": "Buying Agent"
+  },
+  {
+    "agent_id": 5,
+    "image": "https://i.ibb.co/6PY65wm/14.jpg",
+    "name": "David Brown",
+    "post": "Real Estate Broker"
+  },
+  {
+    "agent_id": 6,
+    "image": "https://i.ibb.co/n3CnccL/16-1.jpg",
+    "name": "Sarah Martinez",
+    "post": "Buying Agent"
+  },
+  {
+    "agent_id": 7,
+    "image": "https://i.ibb.co/X2GKcN9/18.jpg",
+    "name": "Chris Wilson",
+    "post": "Real Estate Broker"
+  },
+  {
+    "agent_id": 8,
+    "image": "https://i.ibb.co/bNkcZb4/19-270x340.jpg",
+    "name": "Jessica Taylor",
+    "post": "Buying Agent"
+  },
+  {
+    "agent_id": 9,
+    "image": "https://i.ibb.co/TMhnWwb/22.jpg",
+    "name": "James Lee",
+    "post": "Real Estate Broker"
+  },
+  {
+    "agent_id": 10,
+    "image": "https://i.ibb.co/nPqDbt0/23.jpg",
+    "name": "Amanda Garcia",
+    "post": "Buying Agent"
+  }
+]

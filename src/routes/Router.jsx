@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layouts/Root";
-import Team from "../pages/Team";
 import Gallery from "../pages/Gallery";
 import UpdateProfile from "../pages/UpdateProfile";
 import Login from "../pages/Login";
@@ -9,6 +8,7 @@ import Home from "../pages/Home/Home";
 import PropertyDetails from "../pages/propertyDetails/PropertyDetails";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import Team from "../pages/team/Team";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +31,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/team",
-        element: <Team></Team>,
+        element: (
+          <PrivateRoute>
+            <Team></Team>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/agents.json"),
       },
       {
         path: "/gallery",

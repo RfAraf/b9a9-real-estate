@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
@@ -11,6 +11,7 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState();
   const [showPassword, setShowPassword] = useState();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -35,9 +36,15 @@ const Register = () => {
 
     // create user
     createUser(email, password)
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error.message));
+      .then((result) => {
+        console.log(result.user);
 
+        // navigate to home after register
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
     toast.success("Account created successfully.");
   };
 

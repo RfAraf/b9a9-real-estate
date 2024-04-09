@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
@@ -8,6 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { login, googleLogin, githubLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log("from login", location);
 
   const {
     register,
@@ -20,7 +23,11 @@ const Login = () => {
 
     // login
     login(email, password)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((error) => {
         if (error) {
           toast.error("Invalid email or password. Check and try again.");
