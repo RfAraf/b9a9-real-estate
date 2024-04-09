@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    // create user
+    createUser(email, password)
+      .then((result) => console.log(result.user))
+      .catch();
+  };
 
   return (
     <div className="my-10">
@@ -76,8 +86,8 @@ const Register = () => {
             <button className="btn btn-primary">Register</button>
             <p className="text-center mt-3">
               Do not have an account?{" "}
-              <Link className="text-blue-500 font-bold" to="/register">
-                Register
+              <Link className="text-blue-500 font-bold" to="/login">
+                Log in
               </Link>
             </p>
           </div>
