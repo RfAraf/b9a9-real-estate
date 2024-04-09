@@ -4,10 +4,13 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState();
+  const [showPassword, setShowPassword] = useState();
 
   const {
     register,
@@ -89,12 +92,20 @@ const Register = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type="password"
-              placeholder="password"
-              className="input input-bordered"
-              {...register("password", { required: true })}
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="password"
+                className="input input-bordered w-full"
+                {...register("password", { required: true })}
+              />
+              <div
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-4 cursor-pointer "
+              >
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </div>
+            </div>
             {errors.password && (
               <span className="text-red-500 mt-2 text-sm">
                 This field is required
