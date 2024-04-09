@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
+  const { login, googleLogin, githubLogin } = useContext(AuthContext);
 
   const {
     register,
@@ -17,15 +20,19 @@ const Login = () => {
 
     // login
     login(email, password)
-      .then((result) => console.log(result.user))
-      .catch();
+      .then((result) => console.log(result))
+      .catch((error) => {
+        if (error) {
+          toast.error("Invalid email or password. Check and try again.");
+        }
+      });
   };
 
   return (
     <div className="my-10">
       <h1 className="text-3xl text-center mb-5 font-bold">Please Login!</h1>
       <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  mx-auto">
-        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+        <form onSubmit={handleSubmit(onSubmit)} className="card-body pb-0  ">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -53,6 +60,7 @@ const Login = () => {
             {errors.password && (
               <span className="text-red-500 mt-2">This field is required</span>
             )}
+
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
@@ -69,7 +77,19 @@ const Login = () => {
             </p>
           </div>
         </form>
+        <hr className="my-5 mx-8 " />
+        <div className=" space-y-3 mb-6 px-8">
+          <button onClick={googleLogin} className="btn w-full">
+            <FaGoogle />
+            Login with Google
+          </button>
+          <button onClick={githubLogin} className="btn w-full">
+            <FaGithub />
+            Login with Github
+          </button>
+        </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
