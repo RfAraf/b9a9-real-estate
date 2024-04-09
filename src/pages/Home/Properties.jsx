@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Property from "./Property";
+import "animate.css";
 
 const Properties = () => {
   const [properties, setProperties] = useState([]);
@@ -9,9 +10,9 @@ const Properties = () => {
       .then((data) => setProperties(data));
   }, []);
   return (
-    <div className="my-20">
+    <div className="my-20 animate__animated animate__slideInUp">
       <div className="mb-10">
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="text-3xl font-bold text-center ">
           Properties For Sale & Rent
         </h2>
         <p className="text-center max-w-xl mx-auto mt-5">
@@ -20,7 +21,7 @@ const Properties = () => {
           investment.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 ">
         {properties.map((property) => (
           <Property key={property.id} property={property}></Property>
         ))}

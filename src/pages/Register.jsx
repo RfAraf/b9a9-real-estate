@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState();
 
   const {
     register,
@@ -14,10 +17,25 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
+
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters");
+      return;
+    }
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+      setError(
+        "Password must contains at least one uppercase and lowercase letter"
+      );
+      return;
+    }
+    setError("");
+
     // create user
     createUser(email, password)
       .then((result) => console.log(result.user))
-      .catch();
+      .catch((error) => console.error(error.message));
+
+    toast.success("Account created successfully.");
   };
 
   return (
@@ -36,7 +54,9 @@ const Register = () => {
               {...register("name", { required: true })}
             />
             {errors.name && (
-              <span className="text-red-500 mt-2">This field is required</span>
+              <span className="text-red-500 mt-2 text-sm">
+                This field is required
+              </span>
             )}
           </div>
           <div className="form-control">
@@ -60,7 +80,9 @@ const Register = () => {
               {...register("email", { required: true })}
             />
             {errors.email && (
-              <span className="text-red-500 mt-2">This field is required</span>
+              <span className="text-red-500 mt-2 text-sm">
+                This field is required
+              </span>
             )}
           </div>
           <div className="form-control">
@@ -74,8 +96,11 @@ const Register = () => {
               {...register("password", { required: true })}
             />
             {errors.password && (
-              <span className="text-red-500 mt-2">This field is required</span>
+              <span className="text-red-500 mt-2 text-sm">
+                This field is required
+              </span>
             )}
+            {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
@@ -93,6 +118,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

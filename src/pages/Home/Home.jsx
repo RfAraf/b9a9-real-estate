@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Slider from "./Slider";
 import Properties from "./Properties";
+import "animate.css";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <Helmet>
         <title>RF Real State | Home</title>
       </Helmet>
-      <div className="mt-5">
+      <div className="mt-5 animate__animated animate__slideInUp">
         <Slider></Slider>
       </div>
       <div>
