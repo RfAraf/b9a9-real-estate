@@ -5,7 +5,7 @@ import userProfile from "../../assets/user.png";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-  console.log(user);
+
   const navLinks = (
     <>
       <li className="font-bold">
