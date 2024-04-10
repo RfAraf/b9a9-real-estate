@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import userProfile from "../../assets/user.png";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+  console.log(user);
   const navLinks = (
     <>
       <li className="font-bold">
@@ -57,19 +59,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="flex gap-3">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+          <div className="flex items-center gap-3">
+            <div className="tooltip" data-tip={user.displayName}>
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user?.photoURL || userProfile}
+                  />
+                </div>
               </div>
             </div>
+
             <button onClick={logout} className="btn">
               Log out
             </button>

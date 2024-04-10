@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase.config";
@@ -24,6 +25,13 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const updateUserProfile = (name, image) => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    });
+  };
+
   const login = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -39,7 +47,9 @@ const AuthProvider = ({ children }) => {
   const githubLogin = () => {
     setLoading(true);
     signInWithPopup(auth, githubProvider)
-      .then((result) => console.log(result.user))
+      .then((result) => {
+        console.log(result.user);
+      })
       .catch();
   };
 
@@ -67,6 +77,7 @@ const AuthProvider = ({ children }) => {
     logout,
     googleLogin,
     githubLogin,
+    updateUserProfile,
   };
 
   return (

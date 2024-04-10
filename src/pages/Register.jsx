@@ -8,7 +8,7 @@ import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState();
   const [showPassword, setShowPassword] = useState();
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { email, password, name, image } = data;
 
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
@@ -36,11 +36,12 @@ const Register = () => {
 
     // create user
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-
-        // navigate to home after register
-        navigate("/");
+      .then(() => {
+        // update user profile
+        updateUserProfile(name, image).then(() => {
+          // navigate to home after register
+          navigate("/updateProfile");
+        });
       })
       .catch((error) => {
         console.log(error.message);
@@ -77,6 +78,7 @@ const Register = () => {
               type="text"
               placeholder="photo url"
               className="input input-bordered"
+              {...register("image")}
             />
           </div>
           <div className="form-control">
