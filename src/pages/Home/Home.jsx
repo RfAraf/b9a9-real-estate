@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Slider from "./Slider";
 import Properties from "./Properties";
 import PhotoGallery from "./PhotoGallery";
+import PropertyServices from "./PropertyServices";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       </Helmet>
       <Slider></Slider>
       <Properties></Properties>
+      <PropertyServices></PropertyServices>
       <PhotoGallery></PhotoGallery>
     </div>
   );
