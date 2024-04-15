@@ -4,7 +4,7 @@ const TeamAgent = ({ agent }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure>
-        <img src={image} alt="image" />
+        <img className="w-full" src={image} alt="image" />
       </figure>
       <div className="card-body text-center">
         <h2 className="text-2xl font-semibold">{name}</h2>

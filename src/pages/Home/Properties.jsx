@@ -10,9 +10,9 @@ const Properties = () => {
       .then((data) => setProperties(data));
   }, []);
   return (
-    <div className="my-20 animate__animated animate__slideInUp">
+    <div className="animate__animated animate__slideInUp">
       <div className="mb-10">
-        <h2 className="text-3xl font-bold text-center ">
+        <h2 className="text-4xl font-bold text-center ">
           Properties For Sale & Rent
         </h2>
         <p className="text-center max-w-xl mx-auto mt-5">

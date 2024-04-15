@@ -64,16 +64,24 @@ const PropertyDetailsSlider = ({ image }) => {
         className="mySwiper mt-2"
       >
         <SwiperSlide>
-          <img className="opacity-50" src={slider1} />
+          <div className="bg-black">
+            <img className="opacity-50" src={slider1} />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="opacity-50" src={slider2} />
+          <div className="bg-black">
+            <img className="opacity-50" src={slider2} />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="opacity-50" src={slider3} />
+          <div className="bg-black">
+            <img className="opacity-50" src={slider3} />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="opacity-50" src={slider4} />
+          <div className="bg-black">
+            <img className="opacity-50" src={slider4} />
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>

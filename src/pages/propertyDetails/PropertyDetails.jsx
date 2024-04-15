@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { ScrollRestoration, useLoaderData, useParams } from "react-router-dom";
 import { MdGrid4X4 } from "react-icons/md";
 import { IoBedOutline } from "react-icons/io5";
 import { LiaBathSolid } from "react-icons/lia";
@@ -31,18 +31,19 @@ const PropertyDetails = () => {
   const { bedrooms, bathrooms, garages } = room_category;
   return (
     <div className="space-y-10 mb-20">
+      <ScrollRestoration />
       <Helmet>
         <title>RF Real State | Property - {id}</title>
       </Helmet>
       <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mt-5">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold">{estate_title}</h2>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             <h3 className="font-bold border-r-2 pr-5">{price}</h3>
             <h3 className="border-r-2 pr-5">{segment_name}</h3>
             <h3 className="border-r-2 pr-5">For {status}</h3>
             <h3 className="flex gap-2 items-center">
-              <IoLocationOutline /> {address}, {state}
+              <IoLocationOutline className="text-cyan-400" /> {address}, {state}
             </h3>
           </div>
         </div>

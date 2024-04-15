@@ -8,7 +8,7 @@ import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, setReload, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState();
   const [showPassword, setShowPassword] = useState();
   const navigate = useNavigate();
@@ -39,8 +39,9 @@ const Register = () => {
       .then(() => {
         // update user profile
         updateUserProfile(name, image).then(() => {
+          setReload(true);
           // navigate to home after register
-          navigate("/updateProfile");
+          navigate("/");
         });
       })
       .catch((error) => {
@@ -52,7 +53,7 @@ const Register = () => {
   return (
     <div className="my-10">
       <h1 className="text-3xl text-center mb-5 font-bold">Register Now</h1>
-      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  mx-auto">
+      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-cyan-400 mx-auto">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -61,7 +62,7 @@ const Register = () => {
             <input
               type="text"
               placeholder="your name"
-              className="input input-bordered"
+              className="input input-bordered border-cyan-400"
               {...register("name", { required: true })}
             />
             {errors.name && (
@@ -77,7 +78,7 @@ const Register = () => {
             <input
               type="text"
               placeholder="photo url"
-              className="input input-bordered"
+              className="input input-bordered border-cyan-400"
               {...register("image")}
             />
           </div>
@@ -88,7 +89,7 @@ const Register = () => {
             <input
               type="email"
               placeholder="email"
-              className="input input-bordered"
+              className="input input-bordered border-cyan-400"
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -105,7 +106,7 @@ const Register = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
-                className="input input-bordered w-full"
+                className="input input-bordered border-cyan-400 w-full"
                 {...register("password", { required: true })}
               />
               <div
@@ -128,7 +129,9 @@ const Register = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400">
+              Register
+            </button>
             <p className="text-center mt-3">
               Do not have an account?{" "}
               <Link className="text-blue-500 font-bold" to="/login">

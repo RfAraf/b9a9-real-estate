@@ -21,7 +21,7 @@ const Property = ({ property }) => {
         <img className="h-80" src={image} alt="Property" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-3xl font-bold">{estate_title}</h2>
+        <h2 className="card-title text-2xl font-bold">{estate_title}</h2>
         <p>
           <span className="font-bold">Segment:</span> {segment_name}
         </p>
@@ -46,11 +46,14 @@ const Property = ({ property }) => {
         <p>
           <span className="font-bold">Area:</span> {area}
         </p>
-        <div className="card-actions justify-end">
+        <div className="mt-3">
           <Link to={`/property/${id}`}>
-            <button className="btn btn-primary w-full">View Property</button>
+            <button className="btn bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400 font-bold  w-full">
+              View Property
+            </button>
           </Link>
         </div>
+        <div></div>
       </div>
     </div>
   );

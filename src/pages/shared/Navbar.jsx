@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import userProfile from "../../assets/user.png";
+import logo from "../../assets/logo.jpg";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -24,8 +25,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
+    <div className="navbar bg-base-100  justify-center">
+      <div className="navbar-start  w-3/4 ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -50,14 +51,20 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
+
         <Link to="/">
-          <h1 className=" text-3xl font-bold cursor-pointer">RF Real Estate</h1>
+          <div className="flex items-center">
+            <img className="w-10 md:w-20 lg:w-16 xl:w-20" src={logo} alt="" />
+            <h1 className="md:text-3xl lg:text-2xl xl:text-3xl font-bold cursor-pointer">
+              RF <span className="text-cyan-400">REAL</span> ESTATE
+            </h1>
+          </div>
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+      <div className="navbar-center justify-center  hidden lg:flex  ">
+        <ul className="menu menu-horizontal gap-3 lg:gap-0 px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end ">
         {user ? (
           <div className="flex items-center gap-3">
             <div className="tooltip" data-tip={user.displayName}>
@@ -75,13 +82,18 @@ const Navbar = () => {
               </div>
             </div>
 
-            <button onClick={logout} className="btn">
+            <button
+              onClick={logout}
+              className="btn font-bold bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400"
+            >
               Log out
             </button>
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn">Log in</button>
+            <button className="btn font-bold bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400">
+              Log in
+            </button>
           </Link>
         )}
       </div>
