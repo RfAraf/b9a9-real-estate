@@ -18,9 +18,11 @@ const Navbar = () => {
       <li className="font-bold">
         <NavLink to="/gallery">Gallery</NavLink>
       </li>
-      <li className="font-bold">
-        <NavLink to="/updateProfile">Update Profile</NavLink>
-      </li>
+      {user && (
+        <li className="font-bold">
+          <NavLink to="/updateProfile">Update Profile</NavLink>
+        </li>
+      )}
     </>
   );
 

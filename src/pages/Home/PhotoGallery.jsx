@@ -12,7 +12,7 @@ const PhotoGallery = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row-reverse p-0">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Our Photo Gallery</h1>
+            <h1 className="text-4xl font-bold">Our Photo Gallery</h1>
             <p className="py-6">
               Explore the allure of our exquisite properties through our
               captivating photo gallery. Immerse yourself in stunning visuals

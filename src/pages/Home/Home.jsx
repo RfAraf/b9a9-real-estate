@@ -3,6 +3,7 @@ import Slider from "./Slider";
 import Properties from "./Properties";
 import PhotoGallery from "./PhotoGallery";
 import PropertyServices from "./PropertyServices";
+import TeamDisplay from "./TeamDisplay";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Slider></Slider>
       <Properties></Properties>
       <PropertyServices></PropertyServices>
+      <TeamDisplay></TeamDisplay>
       <PhotoGallery></PhotoGallery>
     </div>
   );

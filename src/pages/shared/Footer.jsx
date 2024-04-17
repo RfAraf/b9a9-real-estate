@@ -6,7 +6,7 @@ const footer = () => {
     <footer className="footer footer-center p-10 gap-0 bg-cyan-100 text-base-content rounded">
       <div className="flex items-center">
         <img className="w-10 md:w-20 lg:w-16 xl:w-20" src={logo} alt="" />
-        <h1 className="md:text-3xl lg:text-2xl xl:text-3xl font-bold">
+        <h1 className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-bold">
           RF <span className="text-cyan-400">REAL</span> ESTATE
         </h1>
       </div>

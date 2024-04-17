@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import TeamAgent from "./TeamAgent";
 import "animate.css";
 
@@ -7,6 +7,7 @@ const Team = () => {
   const agents = useLoaderData();
   return (
     <div className="animate__animated animate__zoomIn mb-20">
+      <ScrollRestoration />
       <Helmet>
         <title>RF Real State | Team</title>
       </Helmet>
