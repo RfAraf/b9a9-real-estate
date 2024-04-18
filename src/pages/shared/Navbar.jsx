@@ -10,17 +10,53 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li className="font-bold">
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-cyan-400 py-2 px-4 border border-transparent"
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li className="font-bold">
-        <NavLink to="/team">Team</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-cyan-400 py-2 px-4 border border-transparent"
+          }
+          to="/team"
+        >
+          Team
+        </NavLink>
       </li>
       <li className="font-bold">
-        <NavLink to="/gallery">Gallery</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-cyan-400 py-2 px-4 border border-transparent"
+          }
+          to="/gallery"
+        >
+          Gallery
+        </NavLink>
       </li>
       {user && (
         <li className="font-bold">
-          <NavLink to="/updateProfile">Update Profile</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "bg-white border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg"
+                : "hover:bg-white  hover:text-cyan-400 py-2 px-4 border border-transparent"
+            }
+            to="/updateProfile"
+          >
+            Update Profile
+          </NavLink>
         </li>
       )}
     </>
@@ -64,7 +100,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center justify-center  hidden lg:flex  ">
-        <ul className="menu menu-horizontal gap-3 lg:gap-0 px-1">{navLinks}</ul>
+        <ul className="menu-horizontal">{navLinks}</ul>
       </div>
       <div className="navbar-end ">
         {user ? (
